@@ -17,6 +17,7 @@ export default class TodoInput extends Component {
   handleSubmit() {
 
     this.props.addTodo(this.textInput.value);
+    this.textInput.value = '';
   }
 
   render() {

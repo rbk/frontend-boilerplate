@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 
 
@@ -37,3 +37,9 @@ export default class Todo extends Component {
   }
 
 }
+
+Todo.propTypes = {
+  text: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+};

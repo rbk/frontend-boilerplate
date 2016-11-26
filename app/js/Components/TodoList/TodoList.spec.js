@@ -30,7 +30,8 @@ function mockTodo(overrides = {}) {
  * 3. should render a Todo component
  * 4. should have an initial todos state
  * 5. should take todos as a prop to override initial
- * 6. should add items to the list
+ * 6. should pass the deleteTodo function
+ * 7. should delete a todo when the delete button is hit
  */
 describe('<TodoListContainer />', () => {
 
@@ -69,6 +70,14 @@ describe('<TodoListContainer />', () => {
     const wrapper = mount(<TodoListContainer todos={[mockTodo(), mockTodo(), mockTodo()]} />);
     wrapper.find('button[type="delete"]').first().simulate('click');
     expect(wrapper.find('button[type="delete"]')).to.have.length(2);
+  });
+
+  it('should pass addTodo to <TodoInput />', () => {
+
+    const wrapper = mount(<TodoListContainer todos={[mockTodo(), mockTodo(), mockTodo()]} />);
+    const todoInput = wrapper.find(TodoInput);
+    const addTodo = wrapper.instance().addTodo;
+    expect(todoInput.prop('addTodo')).to.eql(addTodo);
   });
 
 });
@@ -121,38 +130,38 @@ describe('<TodoInput />', () => {
  * 2. It should have a checkbox
  * 3. It should have a delete button
  * 4. It should be able to be completed by checking the box
- * 5. It should be able to be deleted by hitting the delete button
+ * 5. It should change the checkbox based on the completed status
  */
 describe('<Todo />', () => {
 
   it('should render', () => {
 
-    const wrapper = shallow(<Todo />);
+    const wrapper = shallow(<Todo {...mockTodo()} />);
     expect(wrapper).to.have.length(1);
   });
 
   it('should have a checkbox', () => {
 
-    const wrapper = shallow(<Todo />);
+    const wrapper = shallow(<Todo {...mockTodo()} />);
     expect(wrapper.find('input[type="checkbox"]')).to.have.length(1);
   });
 
   it('should have a delete button', () => {
 
-    const wrapper = shallow(<Todo />);
+    const wrapper = shallow(<Todo {...mockTodo()} />);
     expect(wrapper.find('button[type="delete"]')).to.have.length(1);
   });
 
   it('should be completable', () => {
 
-    const wrapper = shallow(<Todo text={mockTodo().text} completed={false} />);
+    const wrapper = shallow(<Todo {...mockTodo()} />);
     wrapper.instance().toggleCompleted();
     expect(wrapper.state('completed')).to.eql(true);
   });
 
   it('should change the checkbox based on completed value', () => {
 
-    const wrapper = shallow(<Todo text={mockTodo().text} completed={false} />);
+    const wrapper = shallow(<Todo {...mockTodo()} />);
     wrapper.instance().toggleCompleted();
     expect(wrapper.find('input[type="checkbox"]').prop('checked')).to.be.true;
   });
