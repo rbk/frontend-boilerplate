@@ -1,0 +1,61 @@
+:root {
+  /* Colors */
+  --color-text: #222;
+  --color-text--light: #505050;
+
+  --color-black: #000000;
+  --color-gry--dark: #505050;
+  --color-gry: #bcbcbc;
+  --color-gry--medium: #888;
+  --color-gry--light: #dedede;
+  --color-gry--bright: #f1f1f1;
+
+  --color-primary: #d6001c; /* red */
+  --color-primary--dark: #a9131f;
+  --color-primary--light: #d64054;
+
+  --color-secondary: var(--color-primary);
+  --color-secondary--dark: var(--color-primary--dark);
+
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary--dark);
+
+  /* Typography */
+  --font-special: var(--font-sans);
+  --font-sans: 'source-sans-pro', sans-serif;
+  --font-serif: utopia-std, serif;
+  --font-header: var(--font-sans);
+  --font-primary: var(--font-sans);
+
+
+  /* Transitions */
+  --transitionSpeed-normal: 250ms;
+  --transitionEasing-normal: ease-in-out;
+
+
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 3rem;
+  --space-5: 4rem;
+  --space-6: 5rem;
+  --space-7: 6rem;
+  --space-8: 7rem;
+  --space-9: 8rem;
+  --space-10: 9rem;
+  --space-11: 10rem;
+
+  /* Widths */
+  --width-main: 960px;
+  --width-narrow: 728px;
+
+  /* Media queries */
+  @custom-media --xs (max-width: 480px);
+  @custom-media --sm (min-width: 480px);
+  @custom-media --md (min-width: 630px);
+  @custom-media --nrw (min-width: 720px);
+  @custom-media --lg (min-width: 800px);
+  @custom-media --mn (min-width: 960px);
+  @custom-media --hdr (min-width: 1440px);
+}
