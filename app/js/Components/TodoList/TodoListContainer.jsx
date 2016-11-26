@@ -1,40 +1,50 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
+import TodoInput from './TodoInput';
+import Todo from './Todo';
 
 export default class TodoListContainer extends Component {
 	constructor(props) {
+
 		super(props);
+    this.state = {
+      todos: this.props.todos || [],
+    };
+
+    this.addTodo = this.addTodo.bind(this);
 	}
 
+  addTodo(text) {
+
+    let todo = {text: text, completed: false};
+
+    this.setState({
+      todos: [].concat(this.state.todos).concat(todo),
+    });
+  }
+
+  deleteTodo(todo) {
+    let newState = this.state.todos;
+    if (newState.indexOf(todo) > -1) {
+      newState.splice(newState.indexOf(todo), 1);
+      this.setState({todos: newState});
+    }
+  }
+
 	render() {
+
+    let todos = this.state.todos.map((todo, index) => {
+      return (
+        <Todo {...todo} key={index} deleteTodo={this.deleteTodo.bind(this, todo)} />
+      );
+    });
+
 		return (
       <section className="xs-col-12 sm-col-12 md-col-6 mx-auto mt3">
-        <div className="col-12">
-          <input className="col-10" type="textfield" />
-          <button className="col-2">Add</button>
-        </div>
+        <TodoInput addTodo={this.addTodo} />
         <ul className="flex flex-column  col-12 pl0 list-style-none">
-          <li className="flex flex-row items-center col-12 px2 py2">
-            <input className="mr2" type="checkbox" />
-            <div className="xs-col-8 sm-col-8 md-col-12">This is a list item</div>
-            <div className="col-2"><button>remove</button></div>
-          </li>
-          <li className="flex flex-row items-center col-12 px2 py2">
-            <input className="mr2" type="checkbox" />
-            <div className="xs-col-8 sm-col-8 md-col-12">This is a list item</div>
-            <div className="col-2"><button>remove</button></div>
-          </li>
-          <li className="flex flex-row items-center col-12 px2 py2">
-            <input className="mr2" type="checkbox" />
-            <div className="xs-col-8 sm-col-8 md-col-12">This is a list item</div>
-            <div className="col-2"><button>remove</button></div>
-          </li>
-          <li className="flex flex-row items-center col-12 px2 py2">
-            <input className="mr2" type="checkbox" />
-            <div className="xs-col-8 sm-col-8 md-col-12">This is a list item</div>
-            <div className="col-2"><button>remove</button></div>
-          </li>
+          {todos}
         </ul>
       </section>
 		);
