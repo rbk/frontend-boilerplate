@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Title from 'Components/Title';
-import TodoList from 'Components/TodoList';
+import Title from 'Features/Title';
+import TodoList from 'Features/TodoList';
 
 export default class Home extends Component {
 

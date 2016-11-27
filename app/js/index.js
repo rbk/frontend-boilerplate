@@ -1,7 +1,14 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Home from 'Containers/Home';
+import {createStore} from 'redux';
+import reducers from './reducers';
 
-const app = document.getElementById('app');
+import Home from 'Routes/Home';
+
+
+let store = createStore(reducers);
+let app = document.getElementById('app');
+
+
 
 ReactDOM.render(<Home />, app);
