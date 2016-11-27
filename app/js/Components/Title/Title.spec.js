@@ -1,7 +1,6 @@
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
 
-import {mount, shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import {expect} from 'chai';
 
 import Title from './Title';
