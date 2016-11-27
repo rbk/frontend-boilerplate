@@ -5,7 +5,7 @@
 export const ADD_NOTE = 'ADD_NOTE';
 export const TOGGLE_NOTE = 'TOGGLE_NOTE';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
-export const VisibilityFilters = {
+export const Filters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
   SHOW_ACTIVE: 'SHOW_ACTIVE',
@@ -15,17 +15,20 @@ export const VisibilityFilters = {
  * Action Creators
  */
 
-export function addNote(note) {
+var nextNoteId = 0;
+
+export function addNote(text) {
   return {
     type: ADD_NOTE,
-    note
+    id: nextNoteId++,
+    text
   };
 };
 
-export function toggleNote(index) {
+export function toggleNote(id) {
   return {
     type: TOGGLE_NOTE,
-    index
+    id
   };
 };
 

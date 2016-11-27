@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
 
 // Reducers
-import noteApp from 'Components/Notelist/reducers';
+import noteApp from 'Features/NoteList/reducers.js';
 
-export default combineReducers({
-  noteApp,
+let app = combineReducers({
+  ...noteApp,
 });
+
+export default app;

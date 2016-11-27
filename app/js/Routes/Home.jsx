@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Title from 'Features/Title';
-import TodoList from 'Features/TodoList';
+import NoteList from 'Features/NoteList';
 
 export default class Home extends Component {
 
@@ -13,7 +13,7 @@ export default class Home extends Component {
     return (
       <main className="col-main mx-auto my2">
         <Title text="This is the Homepage!" />
-				<TodoList />
+				<NoteList />
 
       </main>
     );
