@@ -14,11 +14,11 @@ export default class TodoListPage extends Component {
 
   render() {
     return (
-      <main className="col-main mx-auto my2">
+      <section className="col-main mx-auto my2">
         <Title text="This is the TodoList page!" />
 				<TodoList />
 
-      </main>
+      </section>
     );
   }
 

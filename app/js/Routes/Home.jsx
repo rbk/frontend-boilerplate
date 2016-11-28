@@ -11,8 +11,10 @@ export default class Home extends Component {
 
   render() {
     return (
-      <main>
+      <main className="col-12 px2">
         <Navigation />
+        <p>
+        </p>
         {this.props.children}
       </main>
     );

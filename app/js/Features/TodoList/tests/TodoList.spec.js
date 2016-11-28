@@ -5,9 +5,9 @@ import {mount, shallow} from 'enzyme';
 import {expect} from 'chai';
 
 // Todo List Components
-import TodoListContainer from './TodoListContainer';
-import TodoInput from './TodoInput';
-import Todo from './Todo';
+import TodoListContainer from '../TodoListContainer';
+import TodoInput from '../TodoInput';
+import Todo from '../Todo';
 
 
 

@@ -13,11 +13,11 @@ export default class NoteListPage extends Component {
 
   render() {
     return (
-      <main className="col-main mx-auto my2">
+      <section className="col-main mx-auto my2">
         <Title text="This is the NoteList page!" />
 				<NoteList />
 
-      </main>
+      </section>
     );
   }
 

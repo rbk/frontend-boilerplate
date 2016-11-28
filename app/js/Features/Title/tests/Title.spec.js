@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from 'chai';
 
-import Title from './Title';
+import Title from '../Title';
 
 describe('<Title />', () => {
 
