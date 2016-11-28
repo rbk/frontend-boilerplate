@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Title from 'Features/Title';
-import NoteList from 'Features/NoteList';
+import Navigation from 'Features/Navigation';
+
 
 export default class Home extends Component {
 
@@ -11,10 +11,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <main className="col-main mx-auto my2">
-        <Title text="This is the Homepage!" />
-				<NoteList />
-
+      <main>
+        <Navigation />
+        {this.props.children}
       </main>
     );
   }
