@@ -15,8 +15,9 @@ This is my personal boilerplate for developing in React.
  1. Mocha - test runner
  2. Chai - assertion library
  3. Enzyme - react testing library
- 4. babel-preset-airbnb - babel preset needed for enzyme
- 5. Jsdom - JS implementation of the WhatWG DOM spec
+ 4. Sinon - mock, stub and spy library for testing
+ 5. babel-preset-airbnb - babel preset needed for enzyme
+ 6. Jsdom - JS implementation of the WhatWG DOM spec
 
 ####Display
  1. React - view layer
