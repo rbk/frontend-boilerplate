@@ -4,9 +4,9 @@
   "description": "Personal frontend boilerplate",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config app/webpack/webpack.config.js",
-    "prod": "webpack --progress --colors --watch --config app/webpack/webpack.config.js",
-    "test": "mocha -w app/helpers/browser.js app/js/Features/**/**/*.spec.js"
+    "dev": "webpack-dev-server --config webpack/webpack.config.js",
+    "build": "webpack --progress --colors --watch --config webpack/webpack.config.js",
+    "test": "mocha -w helpers/browser.js src/js/Features/**/**/*.spec.js"
   },
   "author": "",
   "license": "ISC",

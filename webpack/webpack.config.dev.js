@@ -9,16 +9,16 @@ const config = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
 		'webpack/hot/only-dev-server',
-		'./app/js/index.js'
+		'./src/js/index.js'
 	],
   resolve: {
     extensions: ['', '.js', '.jsx'],
     root: [
-      resolve('./app/js'),
+      resolve('./src/js'),
     ],
   },
   output: {
-    path: resolve('./app/dist'),
+    path: resolve('./dist'),
     filename: 'bundle.js',
 		publicPath: 'http://localhost:8080/',
   },
@@ -26,7 +26,7 @@ const config = {
 		hot: true,
 		port: 8080,
 		historyApiFallback: true,
-		contentBase: './app/dist',
+		contentBase: './dist/',
 		publicPath: 'http://localhost:8080/',
 	},
   externals: {
@@ -39,7 +39,7 @@ const config = {
       // babel
       {
         test: /\.(js|jsx)$/,
-        include: [resolve('./app/js')],
+        include: [resolve('./src/js')],
         loader: 'babel',
         query: {
           presets: ['react', 'es2015']
