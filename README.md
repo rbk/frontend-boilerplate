@@ -7,7 +7,6 @@ This is my personal boilerplate for developing in React.
  1. Babel - transpile es6 and beyond
  2. Webpack - builds my JS for the browser
  3. Webpack-dev-server - creates a dev server. The index.html file is in /app/dist/
- 4. Gulp - used for building the PostCSS
  5. @Todo: Get hot reloading to work
  6. @Todo: Build PostCSS with webpack and get rid of gulp
 
@@ -25,8 +24,11 @@ This is my personal boilerplate for developing in React.
  3. Redux - state management
 
 ####Styles
- 1. postcss-custom-media - custom media queries
- 2. postcss-custom-properties - css variables
- 3. postcss-import - css import
- 4. postcss-nested - nested css
- 5. postcss-responsify - builds media queries
+ 1. postcss-import - css import
+
+
+##NPM Scripts
+
+ 1. `npm run dev` Start dev server at localhost:8080
+ 2. `npm run build` Build the files for production
+ 3. `npm run test` Not implemented, will run tests
