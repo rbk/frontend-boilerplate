@@ -11,7 +11,7 @@ export default class Client extends Component {
 
   render() {
     return (
-      <section className="">
+      <section className="mx-auto px3" style={{ maxWidth: '480px' }}>
         <h1>Note list</h1>
 				<NoteList />
 
