@@ -1,3 +1,8 @@
+#Branch:::refactor
+ 1. @TODO: Remove `PostCSS Config could not be loaded. Please check your PostCSS Config.` error
+ 2. @TODO: Rewrite the test for the todo app for the notelist app
+
+
 #Frontend Boilerplate
 This is my personal boilerplate for developing in React.
 
