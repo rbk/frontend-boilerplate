@@ -7,8 +7,7 @@ This is my personal boilerplate for developing in React.
  1. Babel - transpile es6 and beyond
  2. Webpack - builds my JS for the browser
  3. Webpack-dev-server - creates a dev server. The index.html file is in /app/dist/
- 5. @Todo: Get hot reloading to work
- 6. @Todo: Build PostCSS with webpack and get rid of gulp
+ 4. PostCSS packed and extracted with webpack
 
 ####Testing
  1. Mocha - test runner

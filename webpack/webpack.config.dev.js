@@ -52,13 +52,6 @@ const config = {
         loader: 'json',
       },
 
-      // static files
-      {
-        test: /[\s\S]*$/,
-        include: resolve('./assets/dist'),
-        loader: 'file?name=[name].[ext]',
-      },
-
       // images
       {
         test: /\.(jpe?g|png|gif|svg)$/i,

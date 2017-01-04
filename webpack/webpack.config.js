@@ -42,7 +42,7 @@ const devConfig = merge(
     performance: { hints: false },
   },
   tools.setupJS(PATHS.app),
-  tools.setupCSS(PATHS.style),
+  tools.extractCSS(PATHS.style),
   tools.setupHMR(PATHS.app),
   tools.setupHTML({
     title: 'Boilerplate',

@@ -204,7 +204,7 @@ exports.minifyJS = function() {
  * @param {Array} paths array of PostCSS entrypoints
  * @param {Array} loaders array for css adds style-loader by default
  */
-exports.setupCSS = function(paths, loaders = []) {
+exports.setupCSS = function(paths) {
   return {
     module: {
       loaders: [
